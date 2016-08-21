@@ -1,0 +1,262 @@
+#
+# system.prop for mediatek mt6582 - rohan build
+#
+
+rild.libpath=/system/lib/mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+
+
+# MTK, Infinity, 20090720 {
+wifi.interface=wlan0
+# MTK, Infinity, 20090720 }
+
+# MTK, mtk03034, 20101210 {
+ro.mediatek.wlan.wsc=1
+# MTK, mtk03034 20101210}
+# MTK, mtk03034, 20110318 {
+ro.mediatek.wlan.p2p=1
+# MTK, mtk03034 20110318}
+
+# MTK, mtk03034, 20101213 {
+mediatek.wlan.ctia=0
+# MTK, mtk03034 20101213}
+
+
+#
+wifi.tethering.interface=ap0
+#
+
+ro.opengles.version=131072
+
+wifi.direct.interface=p2p0
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+
+# Power off opt in IPO
+sys.ipo.pwrdncap=2
+
+ro.sys.usb.storage.type=mtp,mass_storage
+
+# USB BICR function
+ro.sys.usb.bicr=yes
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+# audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+
+ro.zygote.preload.enable=0
+
+# temporary enables NAV bar (soft keys)
+qemu.hw.mainkeys=0
+
+ro.kernel.zio=38,108,105,16
+#ro.kernel.qemu=1
+#ro.kernel.qemu.gles=0
+ro.boot.selinux=disable
+
+# Disable dirty region for Mali
+debug.hwui.render_dirty_regions=false
+
+# define per device
+ro.sf.lcd_density=220
+
+# Set default ATCI on UserMode for MUSE
+#persist.service.atci.usermode=1
+
+# 2014-11-11 sangsu81.park@lge.com LGP_UMTS_MTK_DEFAULT_NETWORK_MODE [START]
+# default network mode 0(WCDMA/GSM auto) for 3G model
+ro.telephony.default_network=0
+# 2014-11-11 sangsu81.park@lge.com LGP_UMTS_MTK_DEFAULT_NETWORK_MODE [END]
+# 2014-12-29 dohyung.lee@lge.com LGP_UMTS_MTK_NAS_DUAL_SIM_NETWORK_MODE_SUBID_BASE [START]
+gsm.setPrefNetworkType=true
+# 2014-12-29 dohyung.lee@lge.com LGP_UMTS_MTK_NAS_DUAL_SIM_NETWORK_MODE_SUBID_BASE [END]
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+log.tag.GpsLocationProvider=DEBUG
+log.tag.LocationManagerService=DEBUG
+ro.lge.mtk_dualsim=true
+ro.lge.lcd_default_brightness=170
+persist.radio.multisim.config=dsds
+persist.sys.strictmode.disable=true
+ro.lge.chip.vendor=mtk
+ro.mediatek.chip_ver=S01
+ro.mediatek.version.release=ALPS.L0.MP1.TC1SP.V1.4_MUSE6582.Y50.L_TMP2
+ro.mediatek.platform=MT6582
+ro.mediatek.version.sdk=1
+ro.telephony.sim.count=2
+persist.radio.default.sim=0
+net.tethering.noprovisioning=true
+persist.lg.data.fd=-1
+persist.qcril.disable_retry=true
+persist.data.netmgrd.qos.enable=false
+persist.lg.data.fds_prop=0
+persist.md.perm.checked=to_upgrade
+persist.gemini.sim_num=2
+ro.gemini.smart_sim_switch=false
+ril.specific.sm_cause=1
+bgw.current3gband=0
+ril.external.md=0
+ro.btstack=blueangel
+ro.sf.hwrotation=0
+ril.current.share_modem=2
+curlockscreen=1
+ro.mediatek.gemini_support=true
+persist.radio.fd.counter=15
+persist.radio.fd.off.counter=5
+persist.radio.fd.r8.counter=15
+persist.radio.fd.off.r8.counter=5
+persist.mtk.wcn.combo.chipid=-1
+drm.service.enabled=true
+fmradio.driver.enable=1
+ril.first.md=1
+ril.flightmode.poweroffMD=0
+ril.telephony.mode=0
+dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
+mediatek.wlan.chip=CONSYS_MT6582
+mediatek.wlan.module.postfix=_consys_mt6582
+ril.radiooff.poweroffMD=0
+ro.mediatek.version.branch=L0.MP1.TC1SP
+ro.mtk_gemini_support=1
+ro.config.vc_call_vol_steps=6
+ro.config.vc_call_vol_default=3
+ro.mtk_audio_profiles=1
+ro.mtk_audenh_support=1
+ro.mtk_gemini_enhancement=1
+ro.mtk_bt_support=1
+ro.mtk_wappush_support=1
+ro.mtk_agps_app=1
+ro.mtk_matv_analog_support=1
+ro.mtk_wlan_support=1
+ro.mtk_gps_support=1
+ro.mtk_omacp_support=1
+ro.mtk_search_db_support=1
+ro.mtk_dialer_search_support=1
+ro.mtk_dhcpv6c_wifi=1
+ro.have_aacencode_feature=1
+ro.mtk_phone_voice_recording=1
+ro.mtk_fd_support=1
+ro.mtk_widevine_drm_support=1
+ro.mtk_eap_sim_aka=1
+ro.mtk_fm_recording_support=1
+ro.mtk_audio_ape_support=1
+ro.mtk_flv_playback_support=1
+ro.mtk_fd_force_rel_support=1
+ro.mtk_wmv_playback_support=1
+ro.mtk_send_rr_support=1
+ro.mtk_rat_wcdma_preferred=1
+ro.mtk_emmc_support=1
+ro.mtk_bsp_package=1
+ro.mtk_tetheringipv6_support=1
+ro.mtk_phone_number_geo=1
+ro.mtk_enable_md1=1
+ro.mtk_wfd_support=1
+ro.mtk_sim_hot_swap=1
+ro.mtk_thumbnail_play_support=1
+ro.mtk_bip_scws=1
+ro.mtk_perfservice_support=1
+ro.mtk_cta_set=1
+ro.mtk_antibricking_level=2
+ro.mtk_live_photo_support=1
+ro.mtk_motion_track_support=1
+ro.mtk_privacy_protection_lock=1
+ro.mtk_tc1_feature=1
+ro.have_aee_feature=1
+ro.sim_me_lock_mode=0
+ro.mtk_plmn_list_wo_deact=0
+ro.mtk_voice_extension_support=1
+wfd.dummy.enable=1
+ro.mediatek.project.path=sys.knockon.knockoff.distance=10
+ro.lge.lcd_auto_brightness_mode=false
+ro.lge.audio_soundexception=true
+sys.lge.bnrd=0
+ro.lge.capp_ZDi_O=true
+lge.zdi.actionsend=false
+lge.zdi.onactivityresult=true
+lge.zdi.dragdropintent=false
+persist.service.main.enable=0
+persist.service.system.enable=0
+persist.service.radio.enable=0
+persist.service.events.enable=0
+persist.service.kernel.enable=0
+persist.service.packet.enable=0
+persist.service.crash.enable=0
+persist.service.power.enable=0
+ro.carrier=unknown
+wlan.chip.vendor=mtk
+wlan.chip.version=mt6582
+wifi.lge.patch=true
+dhcp.dlna.using=false
+wifi.lge.sleeppolicy=0
+wifi.lge.offdelay=false
+wlan.lge.concurrency=MCC
+wlan.lge.supportsimaka=YES
+wlan.lge.multisimaka=yes
+wlan.lge.supportakaprime=YES
+wifi.lge.hanglessid=false
+wifi.interface=wlan0
+wifi.tethering.interface=wlan0
+wifi.direct.interface=p2p0
+wifi.lge.common_hotspot=true
+wifi.lge.ftm_test=2
+wlan.lge.dcf.enable=true
+wifi.lge.fcc=true
+ro.sf.lcd_density=240
+lge.signed_image=true
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=96m
+dalvik.vm.heapsize=256m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
+ro.lge.revshare=2015
+ro.sys.fw.bg_apps_limit=12
+ro.sys.fw.bg_cached_ratio=0.33
+ro.sys.fw.mOomAdj1=0
+ro.sys.fw.mOomAdj2=1
+ro.sys.fw.mOomAdj3=2
+ro.sys.fw.mOomAdj4=3
+ro.sys.fw.mOomAdj5=9
+ro.sys.fw.mOomAdj6=15
+ro.sys.fw.mOomMinFree1=31424
+ro.sys.fw.mOomMinFree2=46512
+ro.sys.fw.mOomMinFree3=61600
+ro.sys.fw.mOomMinFree4=105488
+ro.sys.fw.mOomMinFree5=120576
+ro.sys.fw.mOomMinFree6=150624
+ro.lge.capp_smartcard_lgril=false
+ro.lge.capp_smartcard_uicc=true
+ro.lge.capp_smartcard_smartmx=false
+ro.lge.capp_cupss.rootdir=/cust
+persist.data.sbp.update=0
+ro.lge.vib_magnitude_index=0,20,40,60,80,100,120,127
+lge.normalizer.param=version2.0/true/8.0/true/15000/1.0/2500/0.6
+ro.sdcrypto.syscall=380
+ro.setupwizard.mode=DISABLED
+ro.com.google.apphider=on
+ro.com.google.gmsversion=5.0_r4
+ro.build.target_operator=GLOBAL
+ro.build.target_country=COM
+ro.lge.swversion=H32410m
+ro.lge.swversion_short=V10m
+ro.lge.swversion_rev=0
+ro.lge.factoryversion=LGH324AT-00-V10m-GLOBAL-COM-DEC-16-2015+0
+ro.build.sbp=1
+ro.lge.custLanguageSet=true
+ro.config.ringtone=01_Lifes_Good.ogg
+ro.config.notification_sound=Crystal.ogg
+ro.config.alarm_alert=Lifes_Good_Alarm.ogg
+ro.config.timer_alert=Timer.ogg
+ro.lge.singleca.enable=1
+persist.sys.dalvik.vm.lib.2=libart.so
+dalvik.vm.isa.arm.features=div
+net.bt.name=Android
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+
